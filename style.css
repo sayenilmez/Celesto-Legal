@@ -1,0 +1,101 @@
+:root {
+  --bg: #07080b;
+  --surface: #11141b;
+  --text: #f2f3f5;
+  --body: #c9ccd3;
+  --muted: #8a8f9a;
+  --gold: #e8c47e;
+  --line: #1f2430;
+  --todo-bg: #4a1d1d;
+  --todo-text: #ffd2d2;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #ffffff;
+    --surface: #f5f5f7;
+    --text: #111318;
+    --body: #2c2f36;
+    --muted: #5d6270;
+    --gold: #8a6420;
+    --line: #e2e4ea;
+    --todo-bg: #ffe1e1;
+    --todo-text: #7a1010;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--body);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.brand {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.brand span { color: var(--gold); }
+
+nav a { color: var(--muted); margin-left: 12px; font-size: 14px; }
+
+h1 { color: var(--text); font-size: 30px; line-height: 1.2; margin: 0 0 4px; }
+h2 { color: var(--text); font-size: 19px; margin: 32px 0 8px; }
+h3 { color: var(--text); font-size: 16px; margin: 20px 0 4px; }
+
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 24px; }
+
+a { color: var(--gold); }
+
+ul { padding-left: 20px; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px 18px;
+  margin: 16px 0;
+}
+
+.promise { border-color: var(--gold); }
+.promise h2 { margin-top: 4px; }
+.promise li { margin: 6px 0; }
+.promise strong, .card strong { color: var(--text); }
+.note { color: var(--muted); font-size: 14px; }
+
+.todo {
+  background: var(--todo-bg);
+  color: var(--todo-text);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+footer a { color: var(--muted); margin-right: 16px; }
